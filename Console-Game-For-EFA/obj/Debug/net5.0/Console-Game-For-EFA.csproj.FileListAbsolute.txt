@@ -1,0 +1,16 @@
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\bin\Debug\net5.0\Console-Game-For-EFA.exe
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\bin\Debug\net5.0\Console-Game-For-EFA.deps.json
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\bin\Debug\net5.0\Console-Game-For-EFA.runtimeconfig.json
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\bin\Debug\net5.0\Console-Game-For-EFA.runtimeconfig.dev.json
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\bin\Debug\net5.0\Console-Game-For-EFA.dll
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\bin\Debug\net5.0\Console-Game-For-EFA.pdb
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\obj\Debug\net5.0\Console-Game-For-EFA.csproj.AssemblyReference.cache
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\obj\Debug\net5.0\Console-Game-For-EFA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\obj\Debug\net5.0\Console-Game-For-EFA.AssemblyInfoInputs.cache
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\obj\Debug\net5.0\Console-Game-For-EFA.AssemblyInfo.cs
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\obj\Debug\net5.0\Console-Game-For-EFA.csproj.CoreCompileInputs.cache
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\obj\Debug\net5.0\Console-Game-For-EFA.dll
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\obj\Debug\net5.0\refint\Console-Game-For-EFA.dll
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\obj\Debug\net5.0\Console-Game-For-EFA.pdb
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\obj\Debug\net5.0\Console-Game-For-EFA.genruntimeconfig.cache
+C:\Users\n64ev\OneDrive\Documents\ElevenFiftyProjects\codingFoundations\dotnetProjects\Console-Game-For-EFA\Console-Game-For-EFA\obj\Debug\net5.0\ref\Console-Game-For-EFA.dll

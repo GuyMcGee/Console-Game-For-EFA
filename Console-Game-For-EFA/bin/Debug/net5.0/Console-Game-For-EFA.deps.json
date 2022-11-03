@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Console-Game-For-EFA/1.0.0": {
+        "runtime": {
+          "Console-Game-For-EFA.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Console-Game-For-EFA/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
