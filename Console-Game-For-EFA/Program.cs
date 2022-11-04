@@ -26,10 +26,10 @@ namespace Console_Game_For_EFA
             Console.WriteLine("Your attack and defense has increased.");
             System.Threading.Thread.Sleep(2000);
             Console.WriteLine("You encounter " + Boss.Name + ".");
-            System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(3200);
             Console.WriteLine("\"..." + User.Name + "...");
             System.Threading.Thread.Sleep(3200);
-            Console.WriteLine("IT'S TIME TO FALL ON YOUR FACE\"");
+            Console.WriteLine("IT'S TIME TO FALL ON YOUR FACE!\"");
             System.Threading.Thread.Sleep(2000);
 
             while (Boss.HP > 0 && User.HP > 0)
@@ -41,27 +41,28 @@ namespace Console_Game_For_EFA
 
                 if (userInput == "1")
                 {
-                    Boss.HP -= User.Attack;
-                    Console.WriteLine("Boss takes " + User.Attack + " damage. Boss health is " + Boss.HP);
-                    System.Threading.Thread.Sleep(2000);
-
-                    Console.WriteLine("The boss prepares to attack...");
-                    System.Threading.Thread.Sleep(2000);
+                    Console.WriteLine(Boss.Name + " attacks");
+                    System.Threading.Thread.Sleep(1000);
                     User.HP -= Boss.Attack;
-                    Console.WriteLine("Boss hits for " + Boss.Attack + ". Your health is " + User.HP);
-                    System.Threading.Thread.Sleep(2000);
+                    Console.WriteLine(Boss.Name + " hits for " + Boss.Attack + ". Your health is now " + User.HP);
+                    System.Threading.Thread.Sleep(1000);
+                    Console.WriteLine(User.Name + " attacks");
+                    System.Threading.Thread.Sleep(1000);
+                    Boss.HP -= User.Attack;
+                    Console.WriteLine(Boss.Name + " takes " + User.Attack + " damage. " + Boss.Name + "'s health is now " + Boss.HP);
+                    System.Threading.Thread.Sleep(1000);
                 }
 
                 else if (userInput == "2")
                 {
-                    Console.WriteLine("Boss prepares to hit for " + Boss.Attack);
-                    System.Threading.Thread.Sleep(2000);
+                    Console.WriteLine(Boss.Name + " prepares to hit for " + Boss.Attack);
+                    System.Threading.Thread.Sleep(1000);
                     Boss.Attack -= User.Block;
                     User.HP -= Boss.Attack;
                     Console.WriteLine("You put your shield up. You take " + Boss.Attack);
-                    System.Threading.Thread.Sleep(2000);
-                    Console.WriteLine("Your health is " + User.HP);
-                    System.Threading.Thread.Sleep(2000);
+                    System.Threading.Thread.Sleep(1000);
+                    Console.WriteLine("Your health is now " + User.HP);
+                    System.Threading.Thread.Sleep(1000);
                 }
 
                 else
@@ -73,12 +74,14 @@ namespace Console_Game_For_EFA
 
                 if (Boss.HP <= 0)
                 {
-                    Console.WriteLine("YOU WIN");
+                    Console.WriteLine("You have defeated Boss Terry and found six-figures worth of treasure.");
+                    System.Threading.Thread.Sleep(2000);
+                    Console.WriteLine("THE END");
                 }
 
                 else
                 {
-                    Console.WriteLine("YOU LOSE, LOSER");
+                    Console.WriteLine("You have fallen on your face.");
                 }
         }
     }
