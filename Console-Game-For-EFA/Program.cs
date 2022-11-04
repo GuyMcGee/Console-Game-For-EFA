@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Runtime.ConstrainedExecution;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Console_Game_For_EFA
 {
@@ -6,37 +8,60 @@ namespace Console_Game_For_EFA
     {
         static void Main(string[] args)
         {
-            var userHP = 10;
-            var enemyHP = 1000000000;
-            var userDP = 3;
-            var block = 3;
+            var User = new User();
+            User.Name = Console.ReadLine();
+            User.HP = 300;
+            User.Block = 10;
 
-            Console.WriteLine("You encounter the boss, \"Puny human, prepare to die!\"");
+            var Boss = new Enemy();
+            Boss.Name = "Boss Terry";
+            Boss.HP = 75;
 
+            Console.WriteLine("You have reached level 3.");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("Your HP is now " + User.HP + ".");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("Previous enemy dropped emerald sword and shield; you pick them up.");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("Your attack and defense has increased.");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("You encounter " + Boss.Name + ".");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("\"..." + User.Name + "...");
+            System.Threading.Thread.Sleep(3200);
+            Console.WriteLine("IT'S TIME TO FALL ON YOUR FACE\"");
+            System.Threading.Thread.Sleep(2000);
 
-            while (enemyHP > 0 && userHP > 0)
+            while (Boss.HP > 0 && User.HP > 0)
             {
-                var userInput = Convert.ToInt32(Console.ReadLine());
-                if (userInput == 1)
-                {
-                    int enemyDP = new Random().Next(1, 10);
+                User.Attack = new Random().Next(5, 30);
+                Boss.Attack = new Random().Next(25, 75);
+                Console.WriteLine("What do you do?");
+                var userInput = Console.ReadLine();
 
-                    enemyHP -= userDP;
-                    Console.WriteLine("Boss takes " + userDP + " damage. Boss health is " + enemyHP);
+                if (userInput == "1")
+                {
+                    Boss.HP -= User.Attack;
+                    Console.WriteLine("Boss takes " + User.Attack + " damage. Boss health is " + Boss.HP);
+                    System.Threading.Thread.Sleep(2000);
 
                     Console.WriteLine("The boss prepares to attack...");
-                    userHP -= enemyDP;
-                    Console.WriteLine("Boss hits for " + enemyDP);
-                    Console.WriteLine("Your health is " + userHP);
+                    System.Threading.Thread.Sleep(2000);
+                    User.HP -= Boss.Attack;
+                    Console.WriteLine("Boss hits for " + Boss.Attack + ". Your health is " + User.HP);
+                    System.Threading.Thread.Sleep(2000);
                 }
 
-                else if (userInput == 2)
+                else if (userInput == "2")
                 {
-                    int enemyDP = new Random().Next(4, 10);
-                    Console.WriteLine("Boss prepares to hit for " + enemyDP);
-                    enemyDP -= block;
-                    Console.WriteLine("You put your shield up. You take " + enemyDP);
-                    Console.WriteLine("Your health is " + userHP);
+                    Console.WriteLine("Boss prepares to hit for " + Boss.Attack);
+                    System.Threading.Thread.Sleep(2000);
+                    Boss.Attack -= User.Block;
+                    User.HP -= Boss.Attack;
+                    Console.WriteLine("You put your shield up. You take " + Boss.Attack);
+                    System.Threading.Thread.Sleep(2000);
+                    Console.WriteLine("Your health is " + User.HP);
+                    System.Threading.Thread.Sleep(2000);
                 }
 
                 else
@@ -46,15 +71,18 @@ namespace Console_Game_For_EFA
 
             }
 
-            if (enemyHP <= 0)
-            {
-                Console.WriteLine("YOU WIN");
-            }
+                if (Boss.HP <= 0)
+                {
+                    Console.WriteLine("YOU WIN");
+                }
 
-            else
-            {
-                Console.WriteLine("YOU LOSE, LOSER");
-            }
+                else
+                {
+                    Console.WriteLine("YOU LOSE, LOSER");
+                }
+        }
+    }
+
 
 
 
@@ -80,6 +108,6 @@ namespace Console_Game_For_EFA
 
             //Console.WriteLine("LOSER");
         }
-    }
-}
+    
+
     
