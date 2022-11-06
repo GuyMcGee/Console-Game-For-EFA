@@ -74,14 +74,14 @@ namespace Console_Game_For_EFA
 
             if (Boss.HP <= 0 && User.HP > 0)
             {
-                Console.WriteLine("You have defeated Boss Terry and found six-figures worth of treasure.");
+                Console.WriteLine(User.Name + " defeated " + Boss.Name + " and found six-figures worth of treasure.");
                 System.Threading.Thread.Sleep(2000);
                 Console.WriteLine("THE END");
             }
 
             else if (Boss.HP <= 0 && User.HP <= 0)
             {
-                Console.WriteLine(User.Name +" & Boss Terry slay each other in simultaneous attacks and waste away together");
+                Console.WriteLine(User.Name +" & " + Boss.Name + " slay each other in simultaneous attacks and waste away together");
                 System.Threading.Thread.Sleep(2000);
                 Console.WriteLine("THE END");
             }
