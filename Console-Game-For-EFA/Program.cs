@@ -72,16 +72,25 @@ namespace Console_Game_For_EFA
 
             }
 
-            if (Boss.HP <= 0)
+            if (Boss.HP <= 0 && User.HP > 0)
             {
                 Console.WriteLine("You have defeated Boss Terry and found six-figures worth of treasure.");
                 System.Threading.Thread.Sleep(2000);
                 Console.WriteLine("THE END");
             }
 
-            else
+            else if (Boss.HP <= 0 && User.HP <= 0)
             {
-                Console.WriteLine("You have fallen on your face.");
+                Console.WriteLine(User.Name +" & Boss Terry slay each other in simultaneous attacks and waste away together");
+                System.Threading.Thread.Sleep(2000);
+                Console.WriteLine("THE END");
+            }
+
+            else if (User.HP <= 0)
+            {
+                Console.WriteLine("You have fallen on your face."); 
+                System.Threading.Thread.Sleep(2000);
+                Console.WriteLine("GAME OVER");
             }
         }
     }
