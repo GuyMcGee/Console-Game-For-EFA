@@ -72,45 +72,20 @@ namespace Console_Game_For_EFA
 
             }
 
-                if (Boss.HP <= 0)
-                {
-                    Console.WriteLine("You have defeated Boss Terry and found six-figures worth of treasure.");
-                    System.Threading.Thread.Sleep(2000);
-                    Console.WriteLine("THE END");
-                }
+            if (Boss.HP <= 0)
+            {
+                Console.WriteLine("You have defeated Boss Terry and found six-figures worth of treasure.");
+                System.Threading.Thread.Sleep(2000);
+                Console.WriteLine("THE END");
+            }
 
-                else
-                {
-                    Console.WriteLine("You have fallen on your face.");
-                }
+            else
+            {
+                Console.WriteLine("You have fallen on your face.");
+            }
         }
     }
+}
 
-
-
-
-            //if (userInput = 1)
-            //    Console.WriteLine("");
-
-            //var bossHP = 200;
-
-            //Random ranNum = new Random();
-            //int secretNumber = ranNum.Next(1, 10);
-            //var counter = 4;
-
-            //do
-            //{
-            //    if (int.Parse(Console.ReadLine()) == secretNumber)
-            //    {
-            //        Console.WriteLine("A WINNER IS YOU!");
-            //    }
-
-            //    counter--;
-
-            //} while (counter > 0);
-
-            //Console.WriteLine("LOSER");
-        }
-    
 
     
