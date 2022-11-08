@@ -78,10 +78,10 @@ namespace Console_Game_For_EFA
                 {
                     NightShade.HP -= User.Attack;
                     Console.WriteLine(NightShade.Name + " takes " + User.Attack + " damage. " + NightShade.Name + " health is " + NightShade.HP);
-                    Console.WriteLine("Your health is " +User.HP);
                     Console.WriteLine("Oh No! NightShade is attacking!");
                     User.HP -= NightShade.Attack;
                     Console.WriteLine(NightShade.Name + " stuns for " + NightShade.Attack) ;
+                    Console.WriteLine("Your health is " + User.HP);
                 }
 
                 else if (userInput == "2")
@@ -120,12 +120,12 @@ namespace Console_Game_For_EFA
             Boss.Name = "Boss Terry";
             Boss.HP = 75;
 
-            Console.WriteLine("Level 2.");
+            Console.WriteLine("Level 3");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine(NightShade.Name + " dropped an obsidian sword and shield; you pick them up.");
             System.Threading.Thread.Sleep(2000);
             Console.WriteLine("Your HP is now " + User.HP + ".");
             System.Threading.Thread.Sleep(1500);
-            Console.WriteLine(NightShade.Name + "dropped an obsidian sword and shield; you pick them up.");
-            System.Threading.Thread.Sleep(2000);
             Console.WriteLine("Your attack and defense have increased.");
             System.Threading.Thread.Sleep(2000);
             Console.WriteLine("You encounter...");
