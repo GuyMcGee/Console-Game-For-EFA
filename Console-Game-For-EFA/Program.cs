@@ -16,7 +16,7 @@ namespace Console_Game_For_EFA
         static void Main(string[] args)
         {
             var User = new User();
-            
+            // All 3 contributed to the while loop, which is the core of the three sections of code.
             beginning:
             while (true)
             {
@@ -34,6 +34,7 @@ namespace Console_Game_For_EFA
                 }
             } 
 
+            //Nelson's Level
             User.HP = 100;
             User.Block = 5;
             System.Console.WriteLine("Welcome to the RPG Game, " + User.Name + ".");
@@ -89,7 +90,7 @@ namespace Console_Game_For_EFA
                     Console.WriteLine(NightShade.Name + "prepares to hit for " + NightShade.Attack) ;
                     NightShade.Attack -= User.Block;
                     User.HP -= NightShade.Attack;
-                    Console.WriteLine("You put your shield up.You take ” +enemyDP");
+                    Console.WriteLine("You put your shield up. You take " + NightShade.Attack);
                     Console.WriteLine("Your health is " + User.HP);
                 }
 
@@ -113,6 +114,92 @@ namespace Console_Game_For_EFA
                 goto beginning;
             }
 
+            //Alvaro's Level
+            User.HP = 200;
+            User.Block = 7;
+            var Mountain = new Enemy();
+            Mountain.Name = "The Mountain";
+            Mountain.HP = 50;
+            System.Console.WriteLine("You emerge from the battle wounded but victorious");
+            Thread.Sleep(1000);
+            System.Console.WriteLine("...");
+            Thread.Sleep(2000);
+            System.Console.WriteLine("[You spot a shining item behind the corpse of your enemy]");
+            Thread.Sleep(2000);
+            System.Console.WriteLine("[YOU PICK UP BRONZE ARMOR + IRON SWORD + MYSTERIOUS VIAL!]");
+            System.Console.WriteLine("...");
+            Thread.Sleep(1000);
+            System.Console.WriteLine("[ATTACK INCREASED]");
+            System.Console.WriteLine("[BLOCK + 3]");
+            Thread.Sleep(2000);
+            System.Console.WriteLine("[BLOCK IS NOW 7]");
+            Thread.Sleep(2000);
+            System.Console.WriteLine("[YOU DRINK THE CONTENTS IN THE VIAL...]");
+            Thread.Sleep(2000);
+            System.Console.WriteLine("[YOUR HEALTH IS NOW " + User.HP + "]");
+            Thread.Sleep(2000);
+            Console.WriteLine("[You journey continues ...]");
+            Thread.Sleep(3000);
+            System.Console.WriteLine("Level 2");
+            Thread.Sleep(1500);
+            System.Console.WriteLine("[You approach a narrow bridge and spot the shadow of a figure in the distance ...]");
+            Thread.Sleep(2000);
+            System.Console.WriteLine("(RAINFALL)");
+            Thread.Sleep(2000);
+            System.Console.WriteLine("(THUNDERCRASH)");
+            System.Console.WriteLine("[The figure approaches you and blocks the bridge ...]");
+            Thread.Sleep(3000);
+            System.Console.WriteLine("[The lightning alluminates the sky and reveals the identity of the figure...]");
+            Thread.Sleep(3000);
+            System.Console.WriteLine("[A knight in black armor weilding a giantsword stands in your way]");
+            Thread.Sleep(3000);
+            Console.WriteLine("\"I am " + Mountain.Name + ", Commander of the Forgotten Legion! ");
+            Console.WriteLine("\"" + User.Name + ", I have heard whispers of your name. Know that today, I shall put your reputation to the test. Prepare to become FORGOTTEN!\"");
+            while (Mountain.HP > 0 && User.HP > 0)
+                while (Mountain.HP > 0 && User.HP > 0)
+                {
+                    User.Attack = new Random().Next(3, 25);
+                    Mountain.Attack = new Random().Next(10, 45);
+                    Console.WriteLine("What do you do?");
+                    var userInput = (Console.ReadLine());
+                    if (userInput == "1")
+                    {
+                        Mountain.HP -= User.Attack;
+                        Console.WriteLine(Mountain.Name + " takes " + User.Attack + " damage. " + Mountain.Name + " health is " + Mountain.HP);
+                        Console.WriteLine("Oh No! The Mountain is attacking!");
+                        User.HP -= Mountain.Attack;
+                        Console.WriteLine(Mountain.Name + " slices for " + Mountain.Attack);
+                        Console.WriteLine("Your health is " + User.HP);
+                    }
+                    else if (userInput == "2")
+                    {
+                        Console.WriteLine(Mountain.Name + "winds up a swing for " + Mountain.Attack);
+                        Mountain.Attack -= User.Block;
+                        User.HP -= Mountain.Attack;
+                        Console.WriteLine("You put your shield up. You take " + Mountain.Attack);
+                        Console.WriteLine("Your health is " + User.HP);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Enter Valid Input, fool");
+                    }
+                }
+            if (Mountain.HP <= 0 && User.HP > 0)
+            {
+                Console.WriteLine("Tis but a flesh wound... Know I will have my revenge.. In this life or the next.");
+            }
+            else if (Mountain.HP <= 0 && User.HP <= 0)
+            {
+                System.Console.WriteLine("You slayed your enemy..but at the cost of your own life..");
+                goto beginning;
+            }
+            else if (User.HP <= 0)
+            {
+                Console.WriteLine("Your wounds are too many.. This is the end of the path for," + User.Name + " Play again");
+                goto beginning;
+            }
+
+            // Adam's Level
             User.HP = 300;
             User.Block = 10;
 
@@ -147,27 +234,20 @@ namespace Console_Game_For_EFA
                 if (userInput == "1")
                 {
                     Console.WriteLine(Boss.Name + " attacks");
-                    System.Threading.Thread.Sleep(1000);
                     User.HP -= Boss.Attack;
                     Console.WriteLine(Boss.Name + " hits for " + Boss.Attack + ". Your health is now " + User.HP);
-                    System.Threading.Thread.Sleep(1000);
                     Console.WriteLine(User.Name + " attacks");
-                    System.Threading.Thread.Sleep(1000);
                     Boss.HP -= User.Attack;
                     Console.WriteLine(Boss.Name + " takes " + User.Attack + " damage. " + Boss.Name + "'s health is now " + Boss.HP);
-                    System.Threading.Thread.Sleep(1000);
                 }
 
                 else if (userInput == "2")
                 {
                     Console.WriteLine(Boss.Name + " prepares to hit for " + Boss.Attack);
-                    System.Threading.Thread.Sleep(1000);
                     Boss.Attack -= User.Block;
                     User.HP -= Boss.Attack;
                     Console.WriteLine("You put your shield up. You take " + Boss.Attack);
-                    System.Threading.Thread.Sleep(1000);
                     Console.WriteLine("Your health is now " + User.HP);
-                    System.Threading.Thread.Sleep(1000);
                 }
 
                 else
